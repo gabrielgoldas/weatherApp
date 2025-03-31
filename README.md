@@ -2,58 +2,61 @@
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.5.
 
-## Development server
+![Screenshot do Aplicativo](public/screenshot.png)
 
-To start a local development server, run:
+---
 
-```bash
-ng serve
-```
+### **Visão Geral**
+Este projeto foi desenvolvido com o objetivo de aprender e praticar conceitos relacionados ao desenvolvimento de aplicativos web utilizando **Angular**. Ele permite a busca por informações climáticas, exibindo dados como temperatura, umidade, condições do tempo e mais, com uma interface responsiva.
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+---
 
-## Code scaffolding
+### **Tecnologias Utilizadas**
+- **Angular**: Framework para desenvolvimento da aplicação web.
+- **TypeScript**: Para melhorar a tipagem e organização do código.
+- **HTML5 e CSS3**: Para estruturação e estilização do projeto.
+- **OpenWeather**: Fonte de dados climáticos em tempo real.
+- **Node.js**: Usado para gerenciamento de dependências com o npm.
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+---
 
-```bash
-ng generate component component-name
-```
+### **O Que Foi Aprendido?**
+- Consumo de APIs externas para integração de dados.
+- Manipulação de estados e componentes no Angular.
+- Criação de layouts responsivos utilizando **CSS3** e **Flexbox**.
+- Implementação de boas práticas no desenvolvimento de SPAs (Single Page Applications).
+- Uso de **TypeScript** para um desenvolvimento mais seguro e escalável.
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+---
 
-```bash
-ng generate --help
-```
+### **Funcionalidades**
+- Busca por previsão do tempo baseada no nome da cidade.
+- Exibição de temperatura, umidade e descrição das condições climáticas.
+- Interface responsiva adaptada para desktop e mobile.
 
-## Building
+---
 
-To build the project run:
+### **Como Rodar o Projeto**
 
-```bash
-ng build
-```
+#### Pré-requisitos:
+- Node.js instalado na máquina.
+- Angular CLI instalada globalmente.
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+#### Passos:
+1. Clone o repositório:
+   ```bash
+   git clone https://github.com/seu-usuario/weather-app.git
+   cd weather-app
 
-## Running unit tests
+2. Instale as dependências:
+    ```bash
+    npm install
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+3. Inicie o servidor de desenvolvimento:
+    ```bash
+    npm serve
 
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+4. Acesse o aplicativo no navegador:
+    ```bash
+    http://localhost:4200
+    
