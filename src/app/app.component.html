@@ -1,23 +1,51 @@
 <main class="container">
   <div class="welcome">
     <h1>Seja Bem-Vindo ao WeatherApp</h1>
-  
+
     <p>Aqui você pode encontrar de forma simples e fácil o clima do lugar que deseja!</p>
-    
+
   </div>
 
-  <div class="input">
-    <label for="">Qual cidade você deseja saber o clima neste momento?</label>
-    <input id="input-city" type="text">
+  <div class="input-container">
+    <div class="input">
+      <input id="input-city" [(ngModel)]="city" type="text" placeholder="Digite o nome da cidade:" #cityInput>
+      <button class="search" type="submit" (click)="fetchCurrentWeather(cityInput)">
+        <fa-icon [icon]="faSearch"></fa-icon>
+      </button>
+    </div>
+
+    <div class="container-data" *ngIf="weatherData">
+      <!-- title -->
+      <div class="city-weather">
+        <h3>{{ weatherData.name }}, {{ weatherData.sys.country }}</h3>
+        <p>{{ weatherData.main.temp }}°C</p>
+      </div>
+      <!-- weather description -->
+      <div class="description">
+        <p id="description">{{ weatherData.weather[0].description }}</p>
+        <img id="icon-weather" [src]="iconWeather" alt="Ícone do clima" *ngIf="iconWeather">
+      </div>
+      <!-- wind speed and humidity -->
+      <div class="humidity-wind">
+        <p id="humidity">
+          <fa-icon [icon]="faDroplet"></fa-icon>
+          <span>{{ weatherData.main.humidity }}%</span>
+        </p>
+        <p id="wind">
+          <fa-icon [icon]="faWind"></fa-icon>
+          <span>{{ weatherData.wind.speed }}km/h</span>
+        </p>
+      </div>
+    </div>
+
+    <div *ngIf="errorMessage" class="error-message">
+      {{ errorMessage }}
+    </div>
   </div>
 
   <footer class="footer">
     <p>Gabriel Goldas &copy; 2025</p>
-    <a 
-      href="https://www.linkedin.com/in/gabriel-goldas-39356926b/" 
-      target="_blank" 
-      rel="noopener noreferrer"
-    >
+    <a href="https://www.linkedin.com/in/gabriel-goldas-39356926b/" target="_blank" rel="noopener noreferrer">
       LinkedIn
     </a>
     <a href="https://github.com/gabrielgoldas" target="_blank" rel="noopener noreferrer">GitHub</a>
