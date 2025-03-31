@@ -8,8 +8,19 @@
 
   <div class="input-container">
     <div class="input">
-      <input id="input-city" [(ngModel)]="city" type="text" placeholder="Digite o nome da cidade:" #cityInput>
-      <button class="search" type="submit" (click)="fetchCurrentWeather(cityInput)">
+      <input 
+        id="input-city" 
+        [(ngModel)]="city" 
+        type="text" 
+        placeholder="Digite o nome da cidade:" #cityInput
+        (keydown.enter)="triggerButton()"
+      >
+      <button 
+        class="search" 
+        type="submit" 
+        (click)="fetchCurrentWeather(cityInput)"
+        #searchButton
+      >
         <fa-icon [icon]="faSearch"></fa-icon>
       </button>
     </div>

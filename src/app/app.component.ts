@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { WeatherService } from './services/weather.service';
 import { Weather } from './models/weather.model';
@@ -27,6 +27,14 @@ export class AppComponent {
   faWind = faWind;
 
   constructor(private weatherService: WeatherService) { }
+
+  @ViewChild('searchButton', { static: true }) searchButton!: ElementRef;
+
+  triggerButton(): void {
+    if (this.searchButton) {
+      this.searchButton.nativeElement.click();
+    }
+  }
 
   fetchCurrentWeather(cityInput: HTMLInputElement) {
     this.weatherService.getCurrentWeather(this.city).subscribe(
