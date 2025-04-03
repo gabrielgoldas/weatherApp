@@ -33,24 +33,25 @@
   border-radius: .5rem;
   box-shadow: 2px 2px 7px rgba(0, 0, 0, .8);
   margin: 0 1.5rem 1.5rem 1.5rem;
-}
 
-.input {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: .2rem;
+  .input {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: .2rem;
 
-  #input-city {
-    background-color: #fdfdfd;
-    border-style: none;
-    border-radius: .5rem;
-    padding: .75rem;
-    outline: none;
-    transition: background-color 0.2s ease-out;
+    #input-city {
+      font-family: "Inter", sans-serif;
+      background-color: #fdfdfd;
+      border-style: none;
+      border-radius: .5rem;
+      padding: .75rem;
+      outline: none;
+      transition: background-color 0.2s ease-out;
 
-    &:focus {
-      background-color: #e4e3e3;
+      &:focus {
+        background-color: #e4e3e3;
+      }
     }
   }
 
@@ -77,57 +78,57 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-}
 
-.city-weather {
-  margin-top: 2rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  h3 {
-    font-size: 1.5rem;
-    padding-bottom: .5rem;
+  .city-weather {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+    h3 {
+      font-size: 1.5rem;
+      padding-bottom: .5rem;
+    }
+  
+    p {
+      font-weight: 300;
+    }
   }
-
-  p {
-    font-weight: 300;
+  
+  .description {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    #description {
+      font-weight: bold;
+    }
+  
+    #icon-weather {
+      height: 2.25rem;
+    }
   }
-}
-
-.description {
-  margin-top: 2rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  #description {
-    font-weight: bold;
-  }
-
-  #icon-weather {
-    height: 2.25rem;
-  }
-}
-
-.humidity-wind {
-  margin-top: 2rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  #humidity span {
-    margin-left: .2rem;
-    padding-right: 1rem;
-  }
-
-  #wind {
-    border-left: 1px solid #fdfdfd;
-    padding-left: 1rem;
-  }
-
-  #wind span {
-    margin-left: .2rem;
+  
+  .humidity-wind {
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    #humidity span {
+      margin-left: .2rem;
+      padding-right: 1rem;
+    }
+  
+    #wind {
+      border-left: 1px solid #fdfdfd;
+      padding-left: 1rem;
+    }
+  
+    #wind span {
+      margin-left: .2rem;
+    }
   }
 }
 
@@ -146,16 +147,17 @@
   gap: 2rem;
   width: 100%;
   padding: 1rem;
+
+  p {
+    color: #a09ba1;
+  }
+
+  a {
+    text-decoration: none;
+    color: #fff;
+  }
 }
 
-.footer p {
-  color: #a09ba1;
-}
-
-.footer a {
-  text-decoration: none;
-  color: #fff;
-}
 
 @media (min-width: 768px) {
   .welcome h1 {
@@ -182,6 +184,7 @@
     h1 {
       font-size: 2.75rem;
     }
+
     p {
       font-size: 1.25rem;
     }
@@ -195,10 +198,12 @@
     fa-icon {
       font-size: 1rem;
     }
+
     #input-city {
       padding: 1.25rem 2rem;
       font-size: 1rem;
     }
+
     .search {
       padding: 1.25rem 1.5rem;
     }
@@ -208,6 +213,7 @@
     h3 {
       font-size: 1.75rem;
     }
+
     p {
       font-size: 1.25rem;
     }
@@ -217,6 +223,7 @@
     #description {
       font-size: 1.25rem;
     }
+
     #icon-weather {
       height: 2.75rem;
     }
@@ -230,6 +237,7 @@
     #humidity span {
       font-size: 1.15rem;
     }
+
     #wind span {
       font-size: 1.15rem;
     }
@@ -251,6 +259,7 @@
     h1 {
       font-size: 3.25rem;
     }
+
     p {
       font-size: 1.75rem;
     }
@@ -264,6 +273,7 @@
     fa-icon {
       font-size: 1.25rem;
     }
+
     #input-city {
       font-size: 1.5rem;
     }
@@ -273,6 +283,7 @@
     h3 {
       font-size: 2.25rem;
     }
+
     p {
       font-size: 1.75rem;
     }
@@ -288,9 +299,11 @@
     fa-icon {
       font-size: 1.5rem;
     }
+
     #humidity span {
       font-size: 1.5rem;
     }
+
     #wind span {
       font-size: 1.5rem;
     }
@@ -300,6 +313,7 @@
     a {
       font-size: 1.25rem;
     }
+
     p {
       font-size: 1.25rem;
     }
