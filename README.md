@@ -44,19 +44,38 @@ Este projeto foi desenvolvido com o objetivo de aprender e praticar conceitos re
 
 #### Passos:
 1. Clone o repositório:
-   ```bash
-   git clone https://github.com/seu-usuario/weather-app.git
-   cd weather-app
-
 2. Instale as dependências:
     ```bash
     npm install
+    ```
 
 3. Inicie o servidor de desenvolvimento:
     ```bash
     npm serve
+    ```
 
-4. Acesse o aplicativo no navegador:
+4. Adicione a API Key:
+
+    • Adicione a pasta **environments** ao projeto:
+    ```bash
+    ng g environments
+    ```
+    • Dentro do arquivo **environments**, adicione o conteúdo:
+    ```bash
+    export const environment = {
+        api: '',
+    };
+    ```
+    • E dentro do arquivo **environments.development**, adicione o seguinte conteúdo:
+    ```bash
+    export const environment = {
+        api: 'SUA_API_KEY_AQUI',
+    };
+    ```
+
+5. Acesse o aplicativo no navegador:
     ```bash
     http://localhost:4200
+    ```
+ 
     

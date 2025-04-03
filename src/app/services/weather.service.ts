@@ -8,9 +8,9 @@ import { environment } from "../../environments/environment";
   providedIn: 'root'
 })
 export class WeatherService {
-  private baseUrl = environment.api
+  private baseUrl = 'https://api.openweathermap.org/data/2.5/weather?'
   private apiKey = environment.apiKey
-  private baseUrlIcon = environment.baseUrlIcon
+  private baseUrlIcon = 'https://openweathermap.org/img/wn/'
 
   constructor(private httpClient: HttpClient) { }
 
